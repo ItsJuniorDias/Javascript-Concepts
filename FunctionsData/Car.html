@@ -1,0 +1,36 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array Car</title>
+  </head> 
+  <body> 
+    <script> 
+      var cars = [
+        {marca: 'Audi', cor: 'preto'},
+        {marca: 'Audi', cor: 'branco'},
+        {marca: 'Ferarri', cor: 'vermelho'},
+        {marca: 'Ferarri', cor: 'vermelho'},
+        {marca: 'Ford', cor: 'branco'},
+        {marca: 'Peugot', cor: 'branco'}     
+        ];
+
+     function groupBy(array, prop){
+        var value = array.reduce((total,item) => {
+          var key = item[prop];
+
+          total[key] = (total[key] || []).concat(item);
+
+          return total;
+        }, {});
+
+        return value;
+      }
+      
+      var groupCar = groupBy(cars, 'marca');
+
+      console.log(groupCar);
+
+
+    </script>
+  </body>
+</html>

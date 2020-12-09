@@ -1,0 +1,20 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array NameUppercase</title>
+  </head> 
+  <body> 
+    <script> 
+      var convidados = [
+      {nome: "felipe", vip: false}, 
+      {nome: "danIEl", vip: true}, 
+      {nome: "João", vip: true}
+      ];
+
+      const nameUppercase = convidados.map((item) => Object.assign(item, {nome: item.nome.toUpperCase()}) )
+      
+
+      console.log(nameUppercase);
+    </script>
+  </body>
+</html>

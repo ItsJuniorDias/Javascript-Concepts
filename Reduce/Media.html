@@ -1,0 +1,24 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array Media</title>
+  </head> 
+  <body> 
+    <script> 
+       var medias = [1.5, 2, 4, 10];
+
+       const media = medias.reduce((total, item, indice, array) => {
+         total = total + item;
+
+         if(indice === array.length - 1 ) {
+           return total / array.length;
+         }
+
+         return total;
+       }, 0);
+
+       console.log(media);
+
+    </script>
+  </body>
+</html>

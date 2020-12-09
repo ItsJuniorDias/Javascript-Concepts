@@ -1,0 +1,16 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array fahrenheit</title>
+  </head> 
+  <body> 
+    <script> 
+      var fahrenheit = [0, 32, 45, 46, 47, 91, 93, 121];
+
+      const celsius = fahrenheit.map((item) => Math.round((item - 32)*5/9));
+
+      console.log(celsius);
+
+    </script>
+  </body>
+</html>
