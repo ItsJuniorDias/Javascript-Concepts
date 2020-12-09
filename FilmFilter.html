@@ -1,0 +1,32 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array Film</title>
+  </head> 
+  <body> 
+    <script> 
+       const films = [
+          {titulo: 'Titanic', duracao: 195, nota: 7.5},
+          {titulo: 'The Avengers', duracao: 203, nota: 9.5},
+          {titulo: 'Bean', duracao: 90, nota: 6.5}
+      ]
+
+      const noteCut = 8 ;
+
+      // const good = (item) => {
+      //   return item.nota >= noteCut; 
+      // }
+
+      // const bad = (item) => {
+      //   return item.nota >= noteCut; 
+      // }
+
+      const goodFilm = films.filter((item) => item.nota >= noteCut);
+
+      const badFilm = films.filter((item) => item.nota <= noteCut);
+
+      console.log(badFilm);
+
+    </script>
+  </body>
+</html>

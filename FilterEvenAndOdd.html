@@ -1,0 +1,18 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array Even And Odd</title>
+  </head> 
+  <body> 
+    <script> 
+       var numberEven = [10, 18, 1, 15, 2, 12, 21, 33, 100];
+
+       var evenNumber = numberEven.filter((item) => item % 2 == 0);
+
+       var oddNumber = numberEven.filter((item) => !(item % 2 == 0))
+       
+       console.log(oddNumber)
+
+    </script>
+  </body>
+</html>
