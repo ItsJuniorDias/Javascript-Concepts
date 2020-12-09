@@ -1,0 +1,36 @@
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Array Car</title>
+  </head> 
+  <body> 
+    <script> 
+      Array.prototype.groupBy = function(prop) {
+        var value = this.reduce(function(total, item) {
+        var key = item[prop];
+          total[key] = (total[key] || []).concat(item);
+
+          return total;
+        }, {});
+
+        return value;
+    }    
+
+    var convidados = [
+        {nome: 'Felipe', idade: 37, genero: 'masculino'},
+        {nome: 'Amanda', idade: 17, genero: 'feminino'},
+        {nome: 'João', idade: 27, genero: 'masculino'},
+        {nome: 'Daniel', idade: 21, genero: 'masculino'},
+        {nome: 'Helena', idade: 21, genero: 'feminino'}
+    ];
+
+     const vipFilter = convidados.sort((a, b) => a.nome > b.nome ? 1: -1)
+     .filter((item) => item.idade >= 18).groupBy('genero')
+      
+
+      console.log(vipFilter);
+
+
+    </script>
+  </body>
+</html>
